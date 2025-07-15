@@ -10,7 +10,7 @@ A classic OPA627 TIA configuration with 100M Ohm feedback resistor was used. 5pF
 At first one OPA2227 was meant to buffer and filter the bias voltage from DAC, however OPA227 was used as one channel would be left redundant, introducing potential unwanted parasitics. OPA227 was design as and inverting unity gain amplifier with a low pass filter.
 
 ## DACs - Digital to analog ICs
-DAC8554 was scrapped due to its inability to output bipolar voltages. //edit: might be usable with A/B configuration
+DAC8554 was scrapped due to its inability to output bipolar voltages. *edit: might be usable with A/B configuration*
 Solutions:
 
 A) merge two DAC channels with a differential OPAMP: + potentially higher resolution; - possible unwanted phase shift, signal may be delayed esspecially when using 8 channels is required
