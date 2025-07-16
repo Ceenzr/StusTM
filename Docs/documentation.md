@@ -14,7 +14,7 @@ Initially ADS1256 was selected to convert the signal from TIA to a digital signa
 
 ADS8681 was used.
 
-An unipolar ADC could be used if the input signal is shifted accordingly, using this configuration higher resolution might be possible at the cost of potentialy introducing some imperfections as a voltage reference and an additional op amp are required.
+A unipolar ADC could be used if the input signal is shifted accordingly, using this configuration higher resolution might be possible at the cost of potentialy introducing some imperfections as a voltage reference and an additional op amp are required.
 
 ## DACs - Digital to analog converters
 DAC8554 was scrapped due to its inability to output bipolar voltages. *edit: might be usable with A/B configuration*
