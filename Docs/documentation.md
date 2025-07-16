@@ -16,6 +16,8 @@ ADS8681 was used with pseudo-differential input.
 
 A unipolar ADC could be used if the input signal is shifted accordingly, using this configuration higher resolution might be possible at the cost of potentialy introducing some imperfections as a voltage reference and an additional op amp are required.
 
+Buffering/filtering the output from OPA627 was considered but omitted, as OPA627 has high slew rate (55V/µs) and is fine to use with an ADC right away. TIA already has a small low pass filter + ADS8681's pseudo-differential configuration should clean up the signal - TIA AGND signal is subtracted from TIA Tip signal (both of them should pick up kind of the same noise)
+
 ## DACs - Digital to analog converters
 DAC8554 was scrapped due to its inability to output bipolar voltages. *edit: might be usable with A/B configuration*
 Solutions:
