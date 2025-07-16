@@ -18,3 +18,6 @@ A) merge two DAC channels with a differential OPAMP: + potentially higher resolu
 B) use one unipolar DAC with level shifting: + cheaper, resolution could be higher as with bipolar; - 4 level shifting op amps required (1 per channel), potentially inaccurate level shift ( voltage may be offserrt inaccurately, though this could be limited by using the dac within proper precise range and subtracting half of desired range with either reference voltage (may not be accurate) or using second chanel running at desired voltages as conditions should be more or less the same for the two channels of the DAC.
 
 C) use a bipolar DAC: + ready out of the box solution, no shifting, no other components needed; - quite expensive, low availability here
+
+After careful consideration configuration C was used, mainly due to its simplicity and no centering or shifting problems. However, I will definitely still look into the other solutions in the future, as if properly calibrated, they might excel in terms of resolution (esspecially conf. A).
+DAC7734 was selected based on its higher availibility and surprisingly lower price.
