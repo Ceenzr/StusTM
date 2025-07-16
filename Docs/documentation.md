@@ -9,7 +9,12 @@ A classic OPA627 TIA configuration with 100M Ohm feedback resistor was used. 5pF
 ## Sample bias driver
 At first one OPA2227 was meant to buffer and filter the bias voltage from DAC, however OPA227 was used as one channel would be left redundant, introducing potential unwanted parasitics. OPA227 was design as and inverting unity gain amplifier with a low pass filter.
 
-## DACs - Digital to analog ICs
+## ADC - Analog to digital converter
+Initially ADS1256 was selected to convert the signal from TIA to a digital signal for the microcontroller. Though, it was left as it could not accept bipolar input voltages. 
+ADS8681 was used.
+An unipolar ADC could be used if the input signal is shifted accordingly, using this configuration higher resolution might be possible at the cost of potentialy introducing some imperfections as a voltage reference and an additional op amp are required.
+
+## DACs - Digital to analog converters
 DAC8554 was scrapped due to its inability to output bipolar voltages. *edit: might be usable with A/B configuration*
 Solutions:
 
