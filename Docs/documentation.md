@@ -20,4 +20,5 @@ B) use one unipolar DAC with level shifting: + cheaper, resolution could be high
 C) use a bipolar DAC: + ready out of the box solution, no shifting, no other components needed; - quite expensive, low availability here
 
 After careful consideration configuration C was used, mainly due to its simplicity and no centering or shifting problems. However, I will definitely still look into the other solutions in the future, as if properly calibrated, they might excel in terms of resolution (esspecially conf. A).
-DAC7734 was selected based on its higher availibility and surprisingly lower price.
+
+DAC7734 was selected based on its higher availibility and surprisingly lower price, although it is kind of old.
