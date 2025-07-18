@@ -16,7 +16,11 @@ ADS8681 was used with pseudo-differential input.
 
 A unipolar ADC could be used if the input signal is shifted accordingly, using this configuration higher resolution might be possible at the cost of potentialy introducing some imperfections as a voltage reference and an additional op amp are required.
 
-Buffering/filtering the output from OPA627 was considered but omitted, as OPA627 has high slew rate (55V/µs) and is fine to use with an ADC right away. TIA already has a small low pass filter + ADS8681's pseudo-differential configuration should clean up the signal - TIA AGND signal is subtracted from TIA Tip signal (both of them should pick up kind of the same noise)
+Buffering/filtering the output from OPA627 was considered but omitted at first, as OPA627 has high slew rate (55V/µs) and is fine to use with an ADC right away. TIA already has a small second order low pass filter + ADS8681's pseudo-differential configuration should clean up the signal - TIA AGND signal is subtracted from TIA Tip signal (both of them should pick up kind of the same noise)
+
+However, one dual channel OPA1612 second order active low pass filter was added using 330R and 4.7nF resulting in a cutoff frequency of about 102.6 KHz. OPA1612 features insanely low noise (1.1 nV/√Hz at 1 kHz) and ultralow distortion (0.000015% at 1 kHz) mandatory for clean readings of the ADC. Even though it has around half the slew rate of OPA627, it should not slow down the process too much as measurements are not taken at a high pace.
+
+For better accuracy REF5040 external reference was selected, as it provides the high accuracy reference voltage of 4.096V necessary for delicate apparatus.
 
 ## DACs - Digital to analog converters
 DAC8554 was scrapped due to its inability to output bipolar voltages. *edit: might be usable with A/B configuration*
