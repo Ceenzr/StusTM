@@ -12,7 +12,7 @@ At first one OPA2227 was meant to buffer and filter the bias voltage from DAC, h
 ## ADC - Analog to digital converter
 Initially ADS1256 was selected to convert the signal from TIA to a digital signal for the microcontroller. Though, it was left as it could not accept bipolar input voltages. 
 
-ADS8681 was used with pseudo-differential input.
+ADS8681 was used with pseudo-differential input and SPI communication protocol.
 
 A unipolar ADC could be used if the input signal is shifted accordingly, using this configuration higher resolution might be possible at the cost of potentialy introducing some imperfections as a voltage reference and an additional op amp are required.
 
